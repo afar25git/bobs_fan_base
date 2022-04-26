@@ -10,9 +10,9 @@ const [characters, setCharacters] = useState (null)
 
   useEffect(() => {
     const getCharacters = async () => {
-      const response = await axios.get(`https://bobsburgers-api.herokuapp.com/characters`)
-      console.log(response.data)
-      setCharacters(response.data)
+      const response = await axios.get(`https://rickandmortyapi.com/api/character`)
+      console.log(response.data.results)
+      setCharacters(response.data.results)
     }
     getCharacters()
 
