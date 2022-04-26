@@ -3,18 +3,31 @@ import axios from "axios"
 
 const CharacterDetails = (props) => {
 
-useEffect(() => {
-    const getDetails = async () => {
-        const response = await axios.get(`https://bobsburgers-api.herokuapp.com/characters`)
-        console.log(response)
-    }
-    getDetails()
-}, [])
+    const [characterDetails, setCharacterDetails] = useState(null)
 
-return (
-    <div>
+    useEffect(() => {
+        const getDetails = async () => {
+            const response = await axios.get(`https://rickandmortyapi.com/api/character`)
+            console.log(response)
+            setCharacterDetails(response.data.results)
+        }
+        getDetails()
+    }, [props.selectedCharacter])
 
-    </div>
+    return (
+        <div>
+            {characterDetails ? (
+                <div className="details">
+                    <div className="character-card">
+                    <img src={`${characterDetails.image}`} alt="poster" />
+                        <h2>{characterDetails.name}</h2>
+                    </div>
+                    <button onClick={props.goBack}>Go Back</button>
+                </div>
+            ) : (
+                <h3>Loading...</h3>
+            )}
+        </div>
 )
 
 }

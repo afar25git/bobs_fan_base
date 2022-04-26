@@ -8,7 +8,8 @@ const CharacterList = (props) => {
                 props.characters.map((character) => (
                     <div className="character-card" key={character.id}>
                         <img src={`${character.image}`} alt={`${character.name}`} />
-                        <input />
+                        <h3>{character.name}</h3>
+                        <button onClick={() => props.selectCharacter(character.id)}>Learn more about Character</button>
                     </div>
                 )) : "loading"
             }
