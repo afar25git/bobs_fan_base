@@ -21,6 +21,9 @@ const CharacterDetails = (props) => {
                     <div className="character-card">
                     <img src={`${characterDetails.image}`} alt="poster" />
                         <h2>{characterDetails.name}</h2>
+                        <p>{characterDetails.status}</p>
+                        <p>From: {characterDetails.origin}</p>
+                        <p>Species: {characterDetails.species}</p>
                     </div>
                     <button onClick={props.goBack}>Go Back</button>
                 </div>
