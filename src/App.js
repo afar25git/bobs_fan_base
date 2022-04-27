@@ -17,9 +17,13 @@ const App = () => {
     setSelectedCharacter(null)
   }
 
+  const randomPage = Math.floor(Math.random() * 42) + 1
+
+
   useEffect(() => {
     const getCharacters = async () => {
-      const response = await axios.get(`https://rickandmortyapi.com/api/character`)
+      
+      const response = await axios.get(`https://rickandmortyapi.com/api/character/?page=${randomPage}`)
       // console.log(response.data.results)
       setCharacters(response.data.results)
     }
@@ -32,7 +36,7 @@ const App = () => {
   return (
     <div className="App">
       <h1>Rick and Morty Fan Zone</h1>
-      <h2>Learn more about your favorite characters</h2>
+      <h2>Click on the image to learn more about your favorite characters</h2>
       {selectedCharacter ? (
         <CharacterDetails selectedCharacter={selectedCharacter} goBack={goBack} />
       ) : (
