@@ -46,10 +46,14 @@
   padding: 0.5em;
 }
 .character-card {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
+}
+.character-card:hover {
+  opacity: .7;
 }
 .character-card img {
   

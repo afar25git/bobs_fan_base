@@ -7,9 +7,9 @@ const CharacterDetails = (props) => {
 
     useEffect(() => {
         const getDetails = async () => {
-            const response = await axios.get(`https://rickandmortyapi.com/api/character`)
+            const response = await axios.get(`https://rickandmortyapi.com/api/character/${props.selectedCharacter}`)
             console.log(response)
-            setCharacterDetails(response.data.results)
+            setCharacterDetails(response.data)
         }
         getDetails()
     }, [props.selectedCharacter])
@@ -18,11 +18,12 @@ const CharacterDetails = (props) => {
         <div>
             {characterDetails ? (
                 <div className="details">
-                    <div className="character-card">
+                    <div className="character-details">
                     <img src={`${characterDetails.image}`} alt="poster" />
                         <h2>{characterDetails.name}</h2>
                         <p>{characterDetails.status}</p>
-                        <p>From: {characterDetails.origin}</p>
+                        <p>Current Location: {characterDetails.location.name}</p>
+                        <p>From: {characterDetails.origin.name}</p>
                         <p>Species: {characterDetails.species}</p>
                     </div>
                     <button onClick={props.goBack}>Go Back</button>
