@@ -58,7 +58,12 @@ h1 {
   margin-top: 20px;
 }
 h2 {
-  margin: 24px auto auto;
+  display: inline-block;
+  font-family: Helvetica, sans-serif;
+  font-size: .8em;
+  font-style: italic;
+  font-weight: normal;
+  margin: 16px auto auto;
 }
 h3 {
   margin: 10px auto;
@@ -73,6 +78,25 @@ h3 {
   grid-template-columns: repeat(4, minmax(100px, 300px));
   grid-gap: 1.3em;
   margin-top: 40px;
+}
+#more-characters {
+  background-color: teal;
+  border-color: #2a5a5b;
+  border-style: solid;
+  border-width: 1px 1px 8px 1px;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Gamja Flower';
+  font-size: 1em;
+  margin-left: 14px;
+  margin-top: 20px;
+  padding: 4px 10px;
+  position: relative;
+  text-transform: uppercase;
+}
+#more-characters:hover {
+  background-color: #306f70;
+  top: 1px;
 }
 .character-card {
   background-color: #fff;

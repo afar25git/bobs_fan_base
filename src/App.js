@@ -42,7 +42,7 @@ const App = () => {
     <div className="App">
       <h1>Welcome to the <img src={LOGO} alt='Rick and Morty' id='logo' /> Fan Zone</h1>
       <h2>Click on the character to learn more or</h2>
-      <button onClick={refreshPage}>Click to get more characters</button>
+      <button onClick={refreshPage} id='more-characters'>Click to get more characters</button>
       {selectedCharacter ? (
         <CharacterDetails selectedCharacter={selectedCharacter} goBack={goBack} />
       ) : (
