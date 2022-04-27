@@ -63,7 +63,7 @@ h2 {
   font-size: .8em;
   font-style: italic;
   font-weight: normal;
-  margin: 16px auto auto;
+  margin: 16px 10px auto auto;
 }
 h3 {
   margin: 10px auto;
@@ -79,7 +79,7 @@ h3 {
   grid-gap: 1.3em;
   margin-top: 40px;
 }
-#more-characters {
+button {
   background-color: teal;
   border-color: #2a5a5b;
   border-style: solid;
@@ -88,13 +88,12 @@ h3 {
   cursor: pointer;
   font-family: 'Gamja Flower';
   font-size: 1em;
-  margin-left: 14px;
   margin-top: 20px;
   padding: 4px 10px;
   position: relative;
   text-transform: uppercase;
 }
-#more-characters:hover {
+button:hover {
   background-color: #306f70;
   top: 1px;
 }
@@ -128,4 +127,24 @@ h3 {
   right: -88px;
   position: fixed;
   max-width: 370px;
+}
+.details {
+  margin-top: 20px;
+}
+.character-details {
+  background-color: #fff;
+  display: flex;
+  margin: 40px auto 20px;
+  width: 88%;
+}
+.character-details img {
+  width: 460px;
+}
+.character-info {
+  margin-left: 20px;
+  text-align: left;
+}
+.character-info h4 {
+  font-size: 3em;
+  margin: 10px auto 0;
 }
