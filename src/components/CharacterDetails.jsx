@@ -22,10 +22,10 @@ const CharacterDetails = (props) => {
                     <img src={`${characterDetails.image}`} alt="poster" />
                      <article className="character-info">
                         <h4>{characterDetails.name}</h4>
-                        <p>{characterDetails.status}</p>
-                        <p>Current Location: {characterDetails.location.name}</p>
-                        <p>From: {characterDetails.origin.name}</p>
-                        <p>Species: {characterDetails.species}</p>
+                        <p className="status">Status: {characterDetails.status}</p>
+                        <p><em>Current Location:</em> {characterDetails.location.name}</p>
+                        <p><em>From:</em> {characterDetails.origin.name}</p>
+                        <p><em>Species:</em> {characterDetails.species}</p>
                     </article>
                     </div>
                     <button onClick={props.goBack}>Go Back</button>

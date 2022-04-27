@@ -133,18 +133,32 @@ button:hover {
 }
 .character-details {
   background-color: #fff;
+  box-shadow: 0 0 8px teal;
   display: flex;
   margin: 40px auto 20px;
   width: 88%;
 }
 .character-details img {
-  width: 460px;
+  min-width: 460px;
 }
 .character-info {
-  margin-left: 20px;
+  margin: 0 20px;
   text-align: left;
 }
 .character-info h4 {
   font-size: 3em;
   margin: 10px auto 0;
+}
+.character-info p {
+  font-size: 1.4em;
+}
+.character-info p em {
+  color: gray;
+  font-size: 70%;
+  display: block;
+}
+.status {
+  font-size: .8em !important;
+  font-weight: lighter;
+  margin: 0;
 }
