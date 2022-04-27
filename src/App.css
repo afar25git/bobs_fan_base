@@ -147,7 +147,8 @@ button:hover {
 }
 .character-info h4 {
   font-size: 3em;
-  margin: 10px auto 0;
+  line-height: .8;
+  margin: 20px auto 10px;
 }
 .character-info p {
   font-size: 1.4em;
@@ -158,6 +159,7 @@ button:hover {
   display: block;
 }
 .status {
+  color: teal;
   font-size: .8em !important;
   font-weight: lighter;
   margin: 0;
