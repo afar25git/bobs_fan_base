@@ -9,8 +9,8 @@ const App = () => {
   const [characters, setCharacters] = useState (null)
   const [selectedCharacter, setSelectedCharacter] = useState(null)
 
-  const selectCharacter = (id) => {
-    setSelectedCharacter(id)
+  const selectCharacter = (data) => {
+    setSelectedCharacter(data)
   }
 
   const goBack = () => {
@@ -33,7 +33,7 @@ const App = () => {
     <div className="App">
       <h1>Rick and Morty Fan Zone</h1>
       <h2>Learn more about your favorite characters</h2>
-      {selectCharacter ? (
+      {selectedCharacter ? (
         <CharacterDetails selectedCharacter={selectedCharacter} goBack={goBack} />
       ) : (
         <CharacterList characters={characters} selectCharacter={selectCharacter} />
