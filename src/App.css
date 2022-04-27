@@ -39,6 +39,11 @@
   }
 }
 
+body {
+  background: url('https://www.freepnglogos.com/uploads/rick-and-morty/rick-and-morty-background-rick-morty-and-man-sky-mashup-wallpaper-taken-from-4.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
 .character-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(100px, 300px));
@@ -57,4 +62,16 @@
 }
 .character-card img {
   display: block;
+}
+#Morty {
+  bottom: 0;
+  left: 20px;
+  position: fixed;
+  max-width: 130px;
+}
+#Rick {
+  bottom: 0;
+  right: -88px;
+  position: fixed;
+  max-width: 370px;
 }
