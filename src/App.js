@@ -40,10 +40,8 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>Welcome to the</h1>
-      <img src={LOGO} alt='Rick and Morty' id='logo' />
-      <h2>Fan Zone</h2>
-      <h3>Click on the image to learn more about your favorite characters</h3>
+      <h1>Welcome to the <img src={LOGO} alt='Rick and Morty' id='logo' /> Fan Zone</h1>
+      <h2>Click on the character to learn more or</h2>
       <button onClick={refreshPage}>Click to get more characters</button>
       {selectedCharacter ? (
         <CharacterDetails selectedCharacter={selectedCharacter} goBack={goBack} />

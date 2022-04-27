@@ -58,14 +58,15 @@ h1 {
   margin-top: 20px;
 }
 h2 {
-  margin: -24px auto auto;
+  margin: 24px auto auto;
 }
 h3 {
   margin: 10px auto;
 }
 #logo {
-  margin-top: -10px;
-  max-width: 400px;
+  display: inline-block;
+  max-width: 300px;
+  vertical-align: middle;
 }
 .character-grid {
   display: grid;

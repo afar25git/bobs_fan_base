@@ -20,7 +20,7 @@ const CharacterDetails = (props) => {
                 <div className="details">
                     <div className="character-details">
                     <img src={`${characterDetails.image}`} alt="poster" />
-                        <h2>{characterDetails.name}</h2>
+                        <h4>{characterDetails.name}</h4>
                         <p>{characterDetails.status}</p>
                         <p>Current Location: {characterDetails.location.name}</p>
                         <p>From: {characterDetails.origin.name}</p>
