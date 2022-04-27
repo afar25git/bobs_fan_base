@@ -28,7 +28,7 @@ const App = () => {
     const getCharacters = async () => {
       
       const response = await axios.get(`https://rickandmortyapi.com/api/character/?page=${randomPage}`)
-      // console.log(response.data.results)
+      console.log(response.data.results)
       setCharacters(response.data.results)
     }
     getCharacters()
