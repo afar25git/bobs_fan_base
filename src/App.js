@@ -17,6 +17,10 @@ const App = () => {
     setSelectedCharacter(null)
   }
 
+  const refreshPage = () => {
+    window.location.reload(false)
+  }  
+
   const randomPage = Math.floor(Math.random() * 42) + 1
 
 
@@ -37,6 +41,7 @@ const App = () => {
     <div className="App">
       <h1>Rick and Morty Fan Zone</h1>
       <h2>Click on the image to learn more about your favorite characters</h2>
+      <button onClick={refreshPage}>Click to get more characters</button>
       {selectedCharacter ? (
         <CharacterDetails selectedCharacter={selectedCharacter} goBack={goBack} />
       ) : (
